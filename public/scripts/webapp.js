@@ -10,7 +10,7 @@ if (typeof exports !=='undefined' && typeof module !=='undefined' && typeof requ
     component: 'div',
     props: {
       className: 'empty',
-    }
+    },
   });
 }
 const { jsonx: JSONX, React, useGlobalHook, Spectre, Autosuggest, ReactDataGrid, } = window;
@@ -212,7 +212,7 @@ const AppBoundContext = {
   },
 };
 const App = () => {
-  const [globalState, globalActions,] = useGlobal();
+  const [globalState, globalActions, ] = useGlobal();
   // return 'hello app';
   return JSONX.getReactElementFromJSONX.call(AppBoundContext, {
     component: 'Spectre.Layout.Grid',
