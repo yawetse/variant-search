@@ -10,5 +10,6 @@ RUN npm install --skip_cli_reconfig=true
 # Bundle app source
 COPY . .
 EXPOSE 8786
+ENV NODE_ENV=development
 
-CMD [ "node", "index.js","-e development" ]
+CMD [ "node", "index.js" ]
