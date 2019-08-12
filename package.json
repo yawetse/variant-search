@@ -8,7 +8,7 @@
   "dependencies": {
     "jsonx": "^0.9.3",
     "modelscript": "^2.3.4",
-    "periodicjs": "^10.70.55",
+    "periodicjs": "^10.70.60",
     "periodicjs.ext.oauth2server": "^10.6.1",
     "periodicjs.ext.passport": "^6.1.2",
     "periodicjs.ext.restful_api": "^1.4.2",
