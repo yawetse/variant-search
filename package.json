@@ -1,0 +1,19 @@
+{
+  "name": "variant-search",
+  "private": true,
+  "scripts": {
+    "start": "node --max-old-space-size=5120  --experimental-worker index.js --e",
+    "test": "mocha -R spec --recursive"
+  },
+  "dependencies": {
+    "jsonx": "^0.9.3",
+    "modelscript": "^2.3.4",
+    "periodicjs": "^10.70.55",
+    "periodicjs.ext.oauth2server": "^10.6.1",
+    "periodicjs.ext.passport": "^6.1.2",
+    "periodicjs.ext.restful_api": "^1.4.2",
+    "promisie": "^2.0.0-alpha.0",
+    "sequelize": "^4.23.2",
+    "sqlite3": "^4.0.9"
+  }
+}
