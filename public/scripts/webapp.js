@@ -1,3 +1,18 @@
+if (typeof exports !=='undefined' && typeof module !=='undefined' && typeof require !=='undefined') {
+  window = global;
+  window.jsonx = require('jsonx');
+  window.React = window.jsonx.__getReact();
+  window.ReactDOM = window.jsonx.__getReactDOM();
+  window.useGlobalHook = window.jsonx.__getUseGlobalHook();
+  window.Spectre = require('jsonx/design/spectre.umd');
+  window.Autosuggest = require('react-autosuggest/dist/standalone/autosuggest');
+  window.ReactDataGrid = window.jsonx.getReactElementFromJSONX({
+    component: 'div',
+    props: {
+      className: 'empty',
+    }
+  });
+}
 const { jsonx: JSONX, React, useGlobalHook, Spectre, Autosuggest, ReactDataGrid, } = window;
 const columnNames = ['Gene', 'Nucleotide Change', 'Protein Change', 'Other Mappings', 'Alias', 'Transcripts', 'Region', 'Reported Classification', 'Inferred Classification', 'Source', 'Last Evaluated', 'Last Updated', 'URL', 'Submitter Comment', 'Assembly', 'Chr', 'Genomic Start', 'Genomic Stop', 'Ref', 'Alt', 'Accession', 'Reported Ref', 'Reported Alt',
 ];
@@ -197,7 +212,7 @@ const AppBoundContext = {
   },
 };
 const App = () => {
-  const [globalState, globalActions, ] = useGlobal();
+  const [globalState, globalActions,] = useGlobal();
   // return 'hello app';
   return JSONX.getReactElementFromJSONX.call(AppBoundContext, {
     component: 'Spectre.Layout.Grid',
@@ -294,10 +309,14 @@ const webApplicationJSONX = {
   component: App,
 };
 
-window.addEventListener('DOMContentLoaded', () => {
-  JSONX.jsonxRender.call(webappBoundContext, { 
-    jsonx: webApplicationJSONX, 
-    resources: { },
-    querySelector:'#root', });
-});
+if (typeof exports !=='undefined' && typeof module !=='undefined' && typeof require !=='undefined') {
+  module.exports = { webApplicationJSONX, App, };
+} else {
+  window.addEventListener('DOMContentLoaded', () => {
+    JSONX.jsonxRender.call(webappBoundContext, { 
+      jsonx: webApplicationJSONX, 
+      resources: { },
+      querySelector:'#root', });
+  });
+}
 

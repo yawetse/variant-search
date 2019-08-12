@@ -7,6 +7,8 @@ const searchRouter = periodic.express.Router();
 const apiRouter = periodic.express.Router();
 const controllers = require('../controllers');
 const oauth2serverControllers = periodic.controllers.extension.get('periodicjs.ext.oauth2server').auth;
+const jsonx = require('jsonx');
+const webappSSR = require('../../../../public/scripts/webapp');
 
 geneRouter.get('/:id', controllers.gene.loadGene);
 searchRouter.get('/genes/:search', controllers.gene.searchGenes);
@@ -18,6 +20,7 @@ apiRouter.use('/v1/search', searchRouter);
 
 extensionRouter.use('/basic_api', apiRouter);
 extensionRouter.all('*', (req, res) => {
+  // console.log({ webappSSR });
   const viewtemplate = {
     viewname: 'react/index',
     themename: periodic.settings.container.name,
@@ -26,6 +29,8 @@ extensionRouter.all('*', (req, res) => {
     periodic: {
       appname: periodic.settings.name,
     },
+    webappHTML: jsonx.outputHTML({ jsonx: webappSSR.webApplicationJSONX, }),
+    // webappHTML: jsonx.outputHTML({webappSSR.App}),
   };
   periodic.core.controller.renderView(req, res, viewtemplate, viewdata);
 });
