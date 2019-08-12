@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>JSONX Benchmark</title>
+    <script  type="text/javascript" src="https://raw.githubusercontent.com/lodash/lodash/4.17.11-npm/lodash.js"></script>
+    <script  type="text/javascript" src="https://raw.githubusercontent.com/bestiejs/platform.js/master/platform.js"></script>
+    <script  type="text/javascript" src="https://raw.githubusercontent.com/bestiejs/benchmark.js/master/benchmark.js"></script>
+    <script type="text/javascript" src="jsonx.web.js"></script>
+    <script type="text/javascript">
+    window.React = jsonx.__getReact();
+    window.ReactDOM = jsonx.__getReactDOM();
+    // shallowEqual=()=>{};
+    // console.log({jsonx});
+    // console.log({React});
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/javascript">
+      // var suite = new Benchmark.Suite('app', {
+      //   setup: function() {
+      //     document.querySelector('#root').innerHTML='';
+      //   },
+      //   teardown: function() {
+      //     document.querySelector('#root').innerHTML='';
+      //   },
+      // });
+      // jsonx.jsonxRender.call(boundConfig,{ 
+      //   jsonx: sampleJSONX, 
+      //   resources: { 
+      //     addedStatus:'LIVE',
+      //     punc:'   !!!!'
+      //   },
+      //   querySelector:'#root', });
+    </script>
+  </body>
+</html>

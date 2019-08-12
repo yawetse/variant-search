@@ -17,8 +17,11 @@ apiRouter.use('/v1/genes', geneRouter);
 apiRouter.use('/v1/search', searchRouter);
 
 extensionRouter.use('/basic_api', apiRouter);
-extensionRouter.all('/', (req, res) => {
-  const viewtemplate = 'home/index';
+extensionRouter.all('*', (req, res) => {
+  const viewtemplate = {
+    viewname: 'react/index',
+    themename: periodic.settings.container.name,
+  };
   const viewdata = {
     periodic: {
       appname: periodic.settings.name,

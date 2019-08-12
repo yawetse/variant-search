@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Variant Search Coding Assignment</title>
+    <script type="text/javascript" src="/vendor/jsonx/jsonx.web.js"></script>
+    <script type="text/javascript">
+    window.React = jsonx.__getReact();
+    window.ReactDOM = jsonx.__getReactDOM();
+    window.useGlobalHook = jsonx.__getUseGlobalHook();
+    </script>
+    <link rel="stylesheet" href="/vendor/spectre.css/dist/spectre.min.css">
+    <link rel="stylesheet" href="/vendor/spectre.css/dist/spectre-exp.min.css">
+    <link rel="stylesheet" href="/vendor/spectre.css/dist/spectre-icons.min.css">
+    <script type="text/javascript" src="/vendor/jsonx/design/spectre.umd.js"></script>
+    <script type="text/javascript" src="/vendor/react-autosuggest/dist/standalone/autosuggest.js"></script>
+    <script type="text/javascript" src="/vendor/react-data-grid/dist/react-data-grid.js"></script>
+    <script type="text/javascript" src="/scripts/webapp.js"></script>
+    <style>
+    .react-autosuggest__container.react-autosuggest__container--open{
+      position: absolute;
+      top:0;
+    }
+    .react-autosuggest__suggestions-container.react-autosuggest__suggestions-container--open{
+      background:white;
+      border:1px solid lightgray;
+    }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
