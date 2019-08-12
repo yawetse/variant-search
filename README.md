@@ -30,18 +30,26 @@ The endpoints require Basic Auth (for Postman/CURL base64 encode `client_id:clie
    - Auto Suggest RESTful endpoint: `http://localhost:8786/basic_api/v1/search/genes/{SEARCHTERM}?format=json`
    - Gene Variants RESTful endpoint: `http://localhost:8786/basic_api/v1/genes/{GENE}?format=json`
 
-## Datasource
-
-A zipped TSV file of variants is available in /data/variants.tsv.zip. Each row in the TSV file represents a genomic variant and contains a Gene column with the gene name. A variant will belong to one and only one gene, but multiple variants may belong to the same gene.
-
 ## Implementation
 
-If you are comfortable with Python and/or React, please use these technologies for your app. You may use any additional frameworks, languages, databases, libraries, etc. that you find appropriate.
+### Server Code
+- See: https://github.com/yawetse/variant-search/tree/master/content/container/periodicjs.container.default
+- Built using Periodicjs (https://github.com/repetere/periodicjs) - My node equvalent of Django there are modules for OAuth servers and authentication, Caching, Multi-factor authentication, RESTful APIs and etc.
+  - Used Extensions:
+    - OAuth 2 Server - provide an OAuth endpoint for external integrations 
+    - Passport, Passport MFA, Basic Auth, and User Access Control - User authentication, access controls, and 2FA/MFA
+    - Restful API - configurable restful API endpoints and authentication
+- Modelscript (https://repetere.github.io/modelscript/) - Data wrangling framework similar to numpy/pandas. Used for TSV -> sqlite
 
-Our expectation is you will be writing some server code, client code, and applying some basic styling to create a working web application. The application should include unit tests.
+### Client Code
+- See: 
+  - https://github.com/yawetse/variant-search/blob/master/content/container/periodicjs.container.default/views/react/index.ejs
+  - https://github.com/yawetse/variant-search/blob/master/public/scripts/webapp.js
+- Built with JSONX - https://github.com/repetere/jsonx - React JSON Syntax - Construct React elements, JSX and HTML with JSON without transpilers.
+  - Build basic Server Side React rendering
+  - Purposely not using Redux in favor of useGlobalState hook.
 
-Here’s an example of how you might group and display the information:
-
+## Implementation
 
 ## Screenshots
 
