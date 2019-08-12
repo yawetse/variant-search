@@ -5,7 +5,8 @@ if (typeof exports !=='undefined' && typeof module !=='undefined' && typeof requ
   window.ReactDOM = window.jsonx.__getReactDOM();
   window.useGlobalHook = window.jsonx.__getUseGlobalHook();
   window.Spectre = require('jsonx/design/spectre.umd');
-  window.Autosuggest = require('react-autosuggest/dist/standalone/autosuggest');
+  window.Autosuggest = require('../vendor/react-autosuggest/dist/standalone/autosuggest.js');
+  // window.Autosuggest = require('react-autosuggest/dist/standalone/autosuggest');
   window.ReactDataGrid = window.jsonx.getReactElementFromJSONX({
     component: 'div',
     props: {
