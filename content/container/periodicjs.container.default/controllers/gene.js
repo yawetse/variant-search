@@ -13,7 +13,7 @@ exports.loadGene = async function loadGene(req, res) {
     const { params, } = req;  
     const genes = await $p.datas.get('standard_gene').search({
       query: {
-        Gene: params.id,
+        Gene: (params.id||'').toUpperCase(),
       },
     });
     res.json(routeUtils.formatResponse({

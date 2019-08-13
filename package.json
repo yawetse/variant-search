@@ -3,7 +3,7 @@
   "private": true,
   "scripts": {
     "start": "node --max-old-space-size=5120  --experimental-worker index.js --e",
-    "test": "mocha -R spec --recursive"
+    "test": "mocha -R spec --recursive --exit"
   },
   "dependencies": {
     "jsonx": "^0.9.3",
@@ -19,5 +19,14 @@
     "sequelize": "^4.23.2",
     "spectre.css": "^0.5.8",
     "sqlite3": "^4.0.9"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "coveralls": "^3.0.6",
+    "jsdom": "^15.1.1",
+    "mocha": "^6.2.0",
+    "nyc": "^14.1.1",
+    "react-test-renderer": "^16.9.0"
   }
 }

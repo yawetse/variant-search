@@ -19,7 +19,7 @@ apiRouter.use('/v1/genes', geneRouter);
 apiRouter.use('/v1/search', searchRouter);
 
 extensionRouter.use('/basic_api', apiRouter);
-extensionRouter.all('*', (req, res) => {
+extensionRouter.get('*', (req, res) => {
   // console.log({ webappSSR });
   const viewtemplate = {
     viewname: 'react/index',

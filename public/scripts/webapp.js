@@ -311,7 +311,7 @@ const webApplicationJSONX = {
 };
 
 if (typeof exports !=='undefined' && typeof module !=='undefined' && typeof require !=='undefined') {
-  module.exports = { webApplicationJSONX, App, };
+  module.exports = { webApplicationJSONX, App, AppAutoSuggest, AppDataGrid, useGlobal, initialGlobalState, globalActions, columnNames, };
 } else {
   window.addEventListener('DOMContentLoaded', () => {
     JSONX.jsonxRender.call(webappBoundContext, { 
