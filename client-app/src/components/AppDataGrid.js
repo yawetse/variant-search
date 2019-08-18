@@ -35,16 +35,15 @@ export default class AppDataGrid extends Component{
     };
   }
   loadGeneData() {
-    console.log('in loadGeneData')
-      fetch(`/basic_api/v1/genes/${this.state.selectedGene}?format=json`)
-        .then(response => response.json())
-        .then(responseJSON => {
-          this.setState({ rows: responseJSON.data.genes, loading:false, });
-        })
-        .catch(e => {
-          console.error(e);
-          this.setState({ loading: false, });
-        });
+    fetch(`/basic_api/v1/genes/${this.state.selectedGene}?format=json`)
+      .then(response => response.json())
+      .then(responseJSON => {
+        this.setState({ rows: responseJSON.data.genes, loading: false, });
+      })
+      .catch(e => {
+        console.error(e);
+        this.setState({ loading: false, });
+      });
   }
   static getDerivedStateFromProps(props, state) {
     const loading = state.selectedGene!== props.globalState.selectedGene
