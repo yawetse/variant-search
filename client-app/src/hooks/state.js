@@ -6,7 +6,6 @@ const initialGlobalState = {
 };
 const globalActions = {
   setGene: (store, Gene) => {
-    console.log({ store, Gene });
     store.setState({
       selectedGene: Gene,
     });
