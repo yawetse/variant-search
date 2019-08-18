@@ -4,7 +4,6 @@ import { Card, } from 'jsonx/design/spectre.umd';
 import * as Layout from '@react-spectre/layout';
 import AppAutoSuggest from '../components/AppAutoSuggest';
 import AppDataGrid from '../components/AppDataGrid';
-// console.log({ Layout, Card });
 
 const App = () => {
   const [ globalState, globalActions, ] = useGlobal();
@@ -37,45 +36,6 @@ const App = () => {
       </Layout.Row>
     </Layout.Grid>
   );
-  // return JSONX.getReactElementFromJSONX.call(AppBoundContext, {
-  //   component: 'Spectre.Layout.Grid',
-  //   props: {
-  //     style: {
-  //       marginTop:'1rem',
-  //     },
-  //   },
-  //   children: [
-  //     {
-  //       component: 'Spectre.Layout.Row',
-  //       children: [
-  //         {
-  //           component: 'Spectre.Layout.Col',
-  //           props: {
-  //             all: 12,
-  //           },
-  //           children: [
-  //             {
-  //               component: 'Spectre.Card.Card',
-  //               children: [
-  //                 {
-  //                   component: 'Spectre.Card.Body',
-  //                   children: [
-  //                     {
-  //                       component: 'AppDataGrid',
-  //                       props: {
-  //                         globalState,
-  //                       },
-  //                     },
-  //                   ],
-  //                 },
-  //               ],
-  //             },
-  //           ],
-  //         },
-  //       ],
-  //     },
-  //   ],
-  // });
 };
 
 export default App;
