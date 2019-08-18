@@ -1,0 +1,22 @@
+/* body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+} */
+.react-autosuggest__container.react-autosuggest__container--open{
+  position: absolute;
+  top: 0;
+  z-index: 100;
+}
+.react-autosuggest__suggestions-container.react-autosuggest__suggestions-container--open{
+  background:white;
+  border:1px solid lightgray;
+}
