@@ -16,7 +16,7 @@
     "react": "^16.9.0",
     "react-autosuggest": "^9.4.3",
     "react-data-grid": "^6.1.0",
-    "sequelize": "^4.23.2",
+    "sequelize": "^5.15.1",
     "spectre.css": "^0.5.8",
     "sqlite3": "^4.0.9"
   },
